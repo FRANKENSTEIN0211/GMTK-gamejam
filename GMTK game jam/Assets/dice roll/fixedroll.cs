@@ -40,8 +40,7 @@ public class fixedroll : MonoBehaviour
         {
             rend.sprite = diceSides[Mathf.Abs(5-diceside)];
             diceside = Mathf.Abs(5 - diceside);
-        }
-        if (turn == true)
+        }else if (turn == true)
         {
             if((diceside==0)|| (diceside == 1) || (diceside == 3) || (diceside == 4))
             {
