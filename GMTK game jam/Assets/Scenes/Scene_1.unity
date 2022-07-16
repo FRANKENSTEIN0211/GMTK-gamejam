@@ -263,7 +263,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   diceside: 5
-  turn: 0
+  turn: 1
 --- !u!61 &250742600
 BoxCollider2D:
   m_ObjectHideFlags: 0
