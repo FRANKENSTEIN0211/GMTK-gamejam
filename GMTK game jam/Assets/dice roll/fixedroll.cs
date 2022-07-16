@@ -3,8 +3,8 @@ using UnityEngine;
 
 public class fixedroll : MonoBehaviour
 {
-    public int diceside = 0;
-    public bool turn = false;
+    static public int diceside = 0;
+    static public bool turn = false;
     private Sprite[] diceSides;
     private SpriteRenderer rend;
 
@@ -17,7 +17,10 @@ public class fixedroll : MonoBehaviour
     }
     private void OnMouseDown()
     {
-        StartCoroutine("RollTheDice");
+        if (collision.stand == true)
+        {
+            StartCoroutine("RollTheDice");
+        }
     }
     private IEnumerator RollTheDice()
     {
