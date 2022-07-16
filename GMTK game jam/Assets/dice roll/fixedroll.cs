@@ -25,7 +25,7 @@ public class fixedroll : MonoBehaviour
         for (int i = 0; i <= 20; i++)
         {
             // Pick up random value from 0 to 5 (All inclusive)
-            randomDiceSide = Random.Range(0, 5);
+            randomDiceSide = Random.Range(0, 6);
 
             // Set sprite to upper face of dice from array according to random value
             rend.sprite = diceSides[randomDiceSide];
