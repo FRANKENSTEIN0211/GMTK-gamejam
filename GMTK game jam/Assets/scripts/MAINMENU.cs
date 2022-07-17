@@ -7,7 +7,15 @@ public class MAINMENU : MonoBehaviour
 {
     public void playgame()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+    }
+    public void howtoplay()
+    {
+        SceneManager.LoadScene("Scene_1");
+    }
+    public void backtomenu()
+    {
+        SceneManager.LoadScene("menu");
     }
     public void home()
     {

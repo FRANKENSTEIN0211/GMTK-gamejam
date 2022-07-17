@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class collision : MonoBehaviour
 {
@@ -16,6 +17,10 @@ public class collision : MonoBehaviour
         {
             stand = true;
             fixedroll.turn = false;
+        }
+        if (coll.gameObject.tag == "Respawn")
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex +0);
         }
     }
     void OnCollisionExit2D(Collision2D collision)
