@@ -1100,6 +1100,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 451d839985a9c594fb54686cb8f2ea40, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  canroll: 1
+  requiredside: 4
 --- !u!1001 &1056431364
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1135,7 +1137,7 @@ PrefabInstance:
     - target: {fileID: 822316647931213799, guid: 61d9abbf31405c449a65cc3c393a93df,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.66
+      value: 0.9
       objectReference: {fileID: 0}
     - target: {fileID: 822316647931213799, guid: 61d9abbf31405c449a65cc3c393a93df,
         type: 3}
@@ -1176,6 +1178,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 822316647931213820, guid: 61d9abbf31405c449a65cc3c393a93df,
+        type: 3}
+      propertyPath: m_JumpForce
+      value: 460
       objectReference: {fileID: 0}
     - target: {fileID: 822316647931213821, guid: 61d9abbf31405c449a65cc3c393a93df,
         type: 3}

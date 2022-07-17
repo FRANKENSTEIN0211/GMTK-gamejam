@@ -12,11 +12,13 @@ public class collision : MonoBehaviour
         {
             stand = true;
             fixedroll.turn = true;
+            Debug.Log(fixedroll.turn);
         }
         if (coll.gameObject.tag == "Vertical")
         {
             stand = true;
             fixedroll.turn = false;
+            Debug.Log(fixedroll.turn);
         }
         if (coll.gameObject.tag == "Respawn")
         {
@@ -26,13 +28,5 @@ public class collision : MonoBehaviour
     void OnCollisionExit2D(Collision2D collision)
     {
         stand = false;
-        if (fixedroll.turn == true)
-        {
-            fixedroll.turn= false;
-        }
-        else
-        {
-            fixedroll.turn = true;
-        }
     }
 }
