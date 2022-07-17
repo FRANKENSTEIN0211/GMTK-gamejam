@@ -3,10 +3,12 @@ using UnityEngine;
 
 public class fixedroll : MonoBehaviour
 {
+    public bool canroll=true;
     static public int diceside = 0;
     static public bool turn = false;
     private Sprite[] diceSides;
     private SpriteRenderer rend;
+    public int requiredside;
 
     // Use this for initialization
     private void Start()
@@ -17,13 +19,14 @@ public class fixedroll : MonoBehaviour
     }
     private void OnMouseDown()
     {
-        if (collision.stand == true)
+        if ((collision.stand == true)&&(canroll==true))
         {
             StartCoroutine("RollTheDice");
         }
     }
     private IEnumerator RollTheDice()
     {
+
         int randomDiceSide = 0;
         for (int i = 0; i <= 20; i++)
         {
@@ -52,6 +55,10 @@ public class fixedroll : MonoBehaviour
                 rend.sprite = diceSides[diceside - 1];
                 diceside = diceside - 1;
             }
+        }
+        if (requiredside == diceside)
+        {
+           canroll = false;
         }
     }
 }
