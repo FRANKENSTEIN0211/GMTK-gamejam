@@ -27,9 +27,7 @@ public class fixedroll : MonoBehaviour
     }
     private void FixedUpdate()
     {
-        turn = move;
-        Debug.Log(turn);
-        Debug.Log(move);
+        move = turn;
     }
     private void OnMouseDown()
     {
@@ -53,12 +51,13 @@ public class fixedroll : MonoBehaviour
             // Pause before next itteration
             yield return new WaitForSeconds(0.05f);
         }
+        Debug.Log(move);
+        Debug.Log(turn);
         if (move == false)
         {
             rend.sprite = diceSides[Mathf.Abs(5-diceside)];
             diceside = Mathf.Abs(5 - diceside);
-        }else if (move == true)
-        {
+        }else {
             if((diceside==0)|| (diceside == 1) || (diceside == 3) || (diceside == 4))
             {
                 rend.sprite = diceSides[diceside+1];
